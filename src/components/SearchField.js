@@ -11,7 +11,7 @@ const SearchField = () => {
 
   const handleButtonSearch = () => {
     fetchData(
-      `search/photos?page=1&query=${searchValue}&client_id=${process.env.REACT_APP_ACCESS_KEY}`
+      `search/photos?page=1&per_page=12&query=${searchValue}&client_id=${process.env.REACT_APP_ACCESS_KEY}`
     );
     setSearchValue("");
     setSearchImage(searchValue);
@@ -20,7 +20,7 @@ const SearchField = () => {
   const handleEnterChange = (e) => {
     if (e.key === "Enter") {
       fetchData(
-        `search/photos?page=1&query=${searchValue}&client_id=${process.env.REACT_APP_ACCESS_KEY}`
+        `search/photos?page=1&per_page=12&query=${searchValue}&client_id=${process.env.REACT_APP_ACCESS_KEY}`
       );
       setSearchValue("");
       setSearchImage(searchValue);
